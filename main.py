@@ -1,3 +1,5 @@
+# Made by tek.dev if ur gonna skid at least give credits
+
 import sys
 import os
 import time
