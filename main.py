@@ -124,7 +124,10 @@ def drag_viewport(sender, app_data):
 if __name__ == "__main__":
     try:
         offsets = requests.get('https://offsets.ntgetwritewatch.workers.dev/offsets.json').json()
-    except: sys.exit(1)
+    except: 
+        print(f"Offsets source is invalid, use a new one: {e}")
+        input("Press Enter to exit...")
+        sys.exit(1)
 
     threading.Thread(target=speed_loop, daemon=True).start()
 
