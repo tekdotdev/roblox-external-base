@@ -121,7 +121,7 @@ def drag_viewport(sender, app_data):
 
 if __name__ == "__main__":
     try:
-        offsets = requests.get('https://raw.githubusercontent.com/NtReadVirtualMemory/Roblox-Offsets-Website/refs/heads/main/offsets.json').json()
+        offsets = requests.get('https://offsets.ntgetwritewatch.workers.dev/offsets.json').json()
     except: sys.exit(1)
 
     threading.Thread(target=speed_loop, daemon=True).start()
